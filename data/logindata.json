@@ -1,0 +1,10 @@
+{
+  "validUser": {
+    "username": "admin@rrs4life.com",
+    "password": "RRS@Ositech"
+  },
+  "invalidUser": {
+    "username": "admin@rrs4life.com",
+    "password": "wrongpass"
+  }
+}

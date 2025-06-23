@@ -33,7 +33,9 @@ export class LoginPage extends BasePage {
    async isLoginSuccessToastVisible(): Promise<boolean> {
   const toast = this.page.getByText('Login Successfully', { exact: false });
   try {
-    await toast.waitFor({ state: 'visible', timeout: 5000 });
+    await toast.waitFor({ state: 'attached', timeout: 5000 });
+        await expect(toast).toBeVisible({ timeout: 2000 });
+
     return true;
   } catch {
     return false;

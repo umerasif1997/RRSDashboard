@@ -1,5 +1,6 @@
 import {expect   , test} from '@playwright/test';
 import { BasePage } from './BasePage';
+import { ENV } from '../env';
 
 export class LoginPage extends BasePage {
  private usernameInput;
@@ -15,7 +16,7 @@ export class LoginPage extends BasePage {
   }
 
   async navigateToLogin(): Promise<void> {
-    await this.navigateto('https://local-copilot-ai.web.app/authentication/login');
+    await this.navigateto(ENV.dashboardUrl);
   }
 
   async enterUsername(username: string): Promise<void> {
